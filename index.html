@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portfolio Tạ Thị Tâm</title>
+<title>Tạ Thị Tâm | Music &amp; Education Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff4fa;--bg2:#f6eaff;--card:rgba(255,255,255,.78);--ink:#2b1745;--mute:#6f5a8a;--p1:#a63fd1;--p2:#ec5fa8;--line:rgba(166,63,209,.18);--glow:rgba(236,95,168,.35);
@@ -108,14 +108,19 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 .rv.on{opacity:1;transform:none}
 @media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto}.pw{max-width:300px;order:-1;margin-top:20px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.pg{display:none;min-height:62vh}.pg.on{display:block;animation:pgin .5s ease both}@keyframes pgin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+nav a.act{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
+.pn{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0 4px;position:relative;z-index:1}
+.pn .btn{margin-top:0}
 </style>
 </head>
 <body>
 <div id="fx" aria-hidden="true"></div>
 <div id="md" role="dialog" aria-modal="true"><div class="tb"><b id="mt"></b><a id="mo" class="btn alt" target="_blank" rel="noopener">↗ Mở tab mới</a><button class="btn" onclick="closePdf()">✕ Đóng</button></div><div id="pv"></div></div>
-<header><div class="bar"><a class="logo" href="#top">♪ Tạ Thị Tâm</a>
-<nav><a href="#gioi-thieu">Giới thiệu</a><a href="#ky-nang">Kỹ năng</a><a href="#quan-diem">Quan điểm</a><a href="#du-an">Dự án</a><a href="#tong-ket">Tổng kết</a><a href="#lien-he">Liên hệ</a></nav></div></header>
+<header><div class="bar"><a class="logo" href="#gioi-thieu">♪ Tạ Thị Tâm</a>
+<nav><a href="#gioi-thieu" data-p="gioi-thieu">Giới thiệu</a><a href="#du-an" data-p="du-an">Dự án</a><a href="#tong-ket" data-p="tong-ket">Tổng kết &amp; Liên hệ</a></nav></div></header>
 
+<div class="pg" data-page="gioi-thieu">
 <div class="hero" id="top">
 <div class="blob" style="width:340px;height:340px;background:var(--p1);top:0;left:-80px"></div>
 <div class="blob" style="width:300px;height:300px;background:var(--p2);bottom:0;right:-60px"></div>
@@ -131,7 +136,7 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="keys" aria-hidden="true"></div>
 
 <main>
-<section id="gioi-thieu" class="about rv">
+<section id="s-gioi-thieu" class="about rv">
 <div class="eyebrow">Giới thiệu bản thân</div><h2>Xin chào, mình là <span class="grad">Tâm</span></h2>
 <div class="idc"><div><small>HỌC VÀ TÊN</small><b>Tạ Thị Tâm</b></div><div><small>LỚP</small><b>K20C SPAN</b></div><div><small>TRƯỜNG</small><b>Đại học Sư phạm NTTW</b></div><div><small>MSSV</small><b>2552210152</b></div></div>
 <p>Mình là Tạ Thị Tâm, hiện đang là sinh viên ngành Sư phạm Âm nhạc. Mình yêu âm nhạc, nghệ thuật và những giá trị đẹp đẽ mà âm nhạc mang đến cho cuộc sống.</p>
@@ -144,7 +149,7 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="card"><div class="ic">🌟</div><h3>Khát vọng nghề nghiệp</h3><p>Trở thành giáo viên âm nhạc tận tâm, sáng tạo, có khả năng truyền cảm hứng và kết nối học sinh bằng âm nhạc.</p></div>
 </div></section>
 
-<section id="ky-nang" class="rv">
+<section id="s-ky-nang" class="rv">
 <div class="eyebrow">Năng lực</div><h2>Kỹ năng <span class="grad">của tôi</span></h2>
 <div class="grid g3">
 <div class="card"><div class="ic">🎤</div><h3>Kỹ năng âm nhạc</h3><p>Thanh nhạc, nhạc cụ, hòa âm, lý thuyết âm nhạc và cảm thụ âm nhạc.</p></div>
@@ -154,7 +159,7 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="card"><div class="ic">🤝</div><h3>Kỹ năng mềm</h3><p>Giao tiếp, làm việc nhóm, quản lý thời gian, thuyết trình và tinh thần trách nhiệm.</p></div>
 </div></section>
 
-<section id="quan-diem" class="about rv">
+<section id="s-quan-diem" class="about rv">
 <div class="eyebrow">Quan điểm giáo dục âm nhạc</div>
 <h2 class="grad">Âm nhạc không chỉ để nghe, mà còn để cảm nhận và trưởng thành.</h2>
 <p>Mình tin rằng mỗi học sinh đều có một thế giới cảm xúc riêng và âm nhạc chính là một con đường tuyệt vời để khám phá thế giới ấy. Người giáo viên âm nhạc không chỉ truyền đạt kiến thức, mà còn khơi gợi niềm đam mê, nuôi dưỡng sự tự tin và tạo điều kiện để mỗi học sinh được thể hiện bản thân.</p>
@@ -167,7 +172,11 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="card"><h3>Hướng đến nghề giáo</h3><p>Không ngừng học hỏi để trở thành giáo viên có trách nhiệm, sáng tạo và nhiệt huyết.</p></div>
 </div></section>
 
-<section id="du-an" class="rv">
+<div class="pn"><span></span><a class="btn" href="#du-an">Xem dự án →</a></div>
+</main></div>
+
+<div class="pg" data-page="du-an"><main>
+<section id="s-du-an" class="rv">
 <div class="eyebrow">Learning &amp; Creative Works</div><h2>Dự án <span class="grad">học tập</span></h2>
 <p class="lead">Sáu bài tập tiêu biểu trong quá trình học tập và thực hành.</p>
 <div class="grid g2">
@@ -179,7 +188,11 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="card pj"><div class="n">PROJECT 06</div><h3>Sử dụng AI có trách nhiệm</h3><p>Phân tích hướng dẫn của VinUniversity, đối chiếu UEH và RMIT, xây dựng bộ bảy nguyên tắc cá nhân.</p><a class="btn off">Link sắp cập nhật</a></div>
 </div></section>
 
-<section id="tong-ket" class="rv">
+<div class="pn"><a class="btn alt" href="#gioi-thieu">← Giới thiệu</a><a class="btn" href="#tong-ket">Tổng kết →</a></div>
+</main></div>
+
+<div class="pg" data-page="tong-ket"><main>
+<section id="s-tong-ket" class="rv">
 <div class="eyebrow">Reflection &amp; Closing</div><h2>Tổng <span class="grad">kết</span></h2>
 <div class="grid g3">
 <div class="card"><div class="ic">✨</div><h3>Thuận lợi</h3><p>Công cụ AI, nền tảng trực tuyến, Canva và nhiều mẫu tham khảo giúp mình tìm ý tưởng, xây dựng nội dung và định hình dấu ấn cá nhân.</p></div>
@@ -192,7 +205,9 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <p class="big">“Lan tỏa tình yêu âm nhạc – Nuôi dưỡng tâm hồn – Khơi nguồn sáng tạo.”</p>
 <p>Xin chân thành cảm ơn thầy cô và mọi người đã dành thời gian theo dõi portfolio của mình!</p>
 </div></section>
-</main>
+<div class="pn"><a class="btn alt" href="#du-an">← Dự án</a><span></span></div>
+</main></div>
+
 <footer id="lien-he"><div class="ct">
 <div><div class="ey2">CONTACT</div><h2>Bạn thấy portfolio này thế nào?</h2>
 <div class="fr"><label>Họ và tên (không bắt buộc)<input id="fn" type="text" autocomplete="name"></label><label>Email *<input id="fe" type="email" autocomplete="email"></label></div>
@@ -202,42 +217,23 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 <div class="cp">© 2026 Tạ Thị Tâm · Music &amp; Education Portfolio ♪</div></footer>
 
 <script>
-var DATA=["projects/bai-tap-01.pdf","projects/bai-tap-02.pdf","projects/bai-tap-03.pdf","projects/bai-tap-04.pdf","projects/bai-tap-05.pdf","projects/bai-tap-06.pdf"];
-var rt=0;
-function bUrl(i){return DATA[i]}
-function openPdf(i,t){
-  var pv=document.getElementById("pv"),tok=++rt,mo=document.getElementById("mo");
-  var url=bUrl(i);
-  document.getElementById("mt").textContent=t;
-  mo.href=url;mo.target="_blank";mo.rel="noopener";mo.onclick=null;
-  document.getElementById("md").classList.add("on");
-  document.body.style.overflow="hidden";
-  pv.scrollTop=0;pv.innerHTML="";
-  var frame=document.createElement("iframe");
-  frame.src=url;frame.title=t;
-  frame.style.cssText="display:block;width:100%;height:100%;min-height:75vh;border:0;background:#fff";
-  pv.appendChild(frame);
-}
+var LINKS=["projects/bai-tap-01.pdf","projects/bai-tap-02.pdf","projects/bai-tap-03.pdf","projects/bai-tap-04.pdf","projects/bai-tap-05.pdf","projects/bai-tap-06.pdf"];
+var rt=0,PJ="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/",pjP=null;
+function ld(s){return new Promise(function(r,j){var e=document.createElement("script");e.src=s;e.onload=r;e.onerror=j;document.head.appendChild(e)})}
+function pj(){if(!pjP)pjP=ld(PJ+"pdf.min.js").then(function(){pdfjsLib.GlobalWorkerOptions.workerSrc=PJ+"pdf.worker.min.js";return ld(PJ+"pdf.worker.min.js")});return pjP}
+function openPdf(u,t){var pv=document.getElementById("pv"),tok=++rt;document.getElementById("mo").href=u;document.getElementById("mt").textContent=t;document.getElementById("md").classList.add("on");document.body.style.overflow="hidden";pv.scrollTop=0;pv.innerHTML="<p>Đang tải bài tập…</p>";
+fetch(u).then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}).then(function(buf){return pj().then(function(){return pdfjsLib.getDocument({data:buf}).promise})}).then(async function(pdf){pv.innerHTML="";var w=Math.min(pv.clientWidth-28,900),d=window.devicePixelRatio||1;for(var n=1;n<=pdf.numPages;n++){if(tok!==rt)return;var pg=await pdf.getPage(n),v0=pg.getViewport({scale:1}),v=pg.getViewport({scale:w/v0.width*d}),c=document.createElement("canvas");c.width=v.width;c.height=v.height;c.style.width=(v.width/d)+"px";pv.appendChild(c);await pg.render({canvasContext:c.getContext("2d"),viewport:v}).promise}}).catch(function(){pv.innerHTML="<p>Không hiển thị được trong trang. Hãy bấm “↗ Mở tab mới” ở phía trên.</p>"})}
 function closePdf(){rt++;document.getElementById("md").classList.remove("on");document.getElementById("pv").innerHTML="";document.body.style.overflow=""}
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closePdf()});
-document.querySelectorAll(".pj").forEach(function(c,i){
-  if(!DATA[i])return;
-  var t=c.querySelector("h3").textContent,w=document.createElement("div");
-  w.className="acts";
-  var b=document.createElement("button");
-  b.className="btn";b.textContent="📖 Xem ngay";
-  b.onclick=function(){openPdf(i,t)};
-  var a=document.createElement("a");
-  a.className="btn alt";a.href=bUrl(i);a.target="_blank";a.rel="noopener";
-  a.textContent="↗ Mở tab mới";
-  w.appendChild(b);w.appendChild(a);
-  var old=c.querySelector(".btn");if(old)old.replaceWith(w);
-});
+document.querySelectorAll(".pj").forEach(function(c,i){if(!LINKS[i])return;var t=c.querySelector("h3").textContent,w=document.createElement("div");w.className="acts";var b=document.createElement("button");b.className="btn";b.textContent="📖 Xem ngay";b.onclick=function(){openPdf(LINKS[i],t)};var a=document.createElement("a");a.className="btn alt";a.href=LINKS[i];a.target="_blank";a.rel="noopener";a.textContent="↗ Mở tab mới";w.appendChild(b);w.appendChild(a);c.querySelector(".btn").replaceWith(w)});
 function sendFb(){var g=function(i){return document.getElementById(i).value.trim()},n=g("fn"),e=g("fe"),m=g("fm"),s=document.getElementById("fs");if(!/^\S+@\S+\.\S+$/.test(e)||!m){s.textContent="Vui lòng nhập email hợp lệ và nội dung góp ý.";return}var a=document.createElement("a");a.href="mailto:tamt00228@gmail.com?subject="+encodeURIComponent("Góp ý portfolio từ "+(n||e))+"&body="+encodeURIComponent(m+"\n\nNgười gửi: "+(n||"(ẩn danh)")+"\nEmail: "+e);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();s.textContent="Cảm ơn bạn! Ứng dụng email sẽ mở để bạn bấm gửi. Nếu không mở, hãy gửi thẳng tới tamt00228@gmail.com."}
 var eq=document.getElementById("eq");for(var i=0;i<26;i++){var b=document.createElement("b");b.style.animationDelay=(Math.random()*-1)+"s";b.style.animationDuration=(.6+Math.random()*.8)+"s";eq.appendChild(b)}
 var fx=document.getElementById("fx"),N=["♪","♫","♩","♬","♡"];for(var j=0;j<16;j++){var s=document.createElement("i");s.textContent=N[j%5];s.style.left=(Math.random()*100)+"%";s.style.fontSize=(16+Math.random()*26)+"px";s.style.animationDuration=(9+Math.random()*10)+"s";s.style.animationDelay=(-Math.random()*14)+"s";fx.appendChild(s)}
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+var PG=["gioi-thieu","du-an","tong-ket"],TT={"gioi-thieu":"Giới thiệu","du-an":"Dự án","tong-ket":"Tổng kết & Liên hệ"};
+function route(){var h=(location.hash||"").slice(1);if(PG.indexOf(h)<0)h=PG[0];document.querySelectorAll(".pg").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-page")===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("act",a.getAttribute("data-p")===h)});document.title=TT[h]+" | Tạ Thị Tâm";window.scrollTo({top:0,behavior:"instant"})}
+window.addEventListener("hashchange",route);route();
 </script>
 </body>
 </html>
