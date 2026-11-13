@@ -112,6 +112,39 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 nav a.act{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
 .pn{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0 4px;position:relative;z-index:1}
 .pn .btn{margin-top:0}
+
+#bw{position:fixed;right:max(10px,env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;width:104px;pointer-events:none}
+#bear{display:block;width:100%;background:none;border:0;padding:0;cursor:pointer;pointer-events:auto;transform-origin:50% 100%;-webkit-tap-highlight-color:transparent}
+#bear:focus-visible{outline:3px solid var(--p2);outline-offset:4px;border-radius:20px}
+#bear svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 6px 10px var(--glow))}
+#bear:not(.jp) svg{animation:bob 2.4s ease-in-out infinite}
+#bear.jp{animation:jmp 1s cubic-bezier(.3,.7,.4,1)}
+@keyframes bob{50%{transform:translateY(-4px)}}
+@keyframes jmp{0%{transform:translateY(0) scale(1,1)}14%{transform:translateY(0) scale(1.12,.86)}42%{transform:translateY(-74px) scale(.93,1.09)}62%{transform:translateY(-74px) scale(.95,1.06)}86%{transform:translateY(0) scale(1.1,.88)}100%{transform:translateY(0) scale(1,1)}}
+#bear .sh,#bear .arl,#bear .arr,#bear .eyes,#bear .tw{transform-box:fill-box}
+#bear .sh{transform-origin:center}
+#bear.jp .sh{animation:shr 1s}
+@keyframes shr{0%,100%{transform:scale(1);opacity:.25}50%{transform:scale(.55);opacity:.12}}
+#bear .arl,#bear .arr{transform-origin:50% 10%}
+#bear .arl{transform:rotate(15deg)}
+#bear .arr{transform:rotate(-15deg)}
+#bear:not(.jp) .arr{animation:wv 1.6s ease-in-out infinite}
+@keyframes wv{50%{transform:rotate(-42deg)}}
+#bear.jp .arl{animation:ul 1s ease-in-out}
+#bear.jp .arr{animation:ur 1s ease-in-out}
+@keyframes ul{0%,100%{transform:rotate(15deg)}25%,78%{transform:rotate(150deg)}}
+@keyframes ur{0%,100%{transform:rotate(-15deg)}25%,78%{transform:rotate(-150deg)}}
+#bear .eyes{transform-origin:center;animation:bl 4s infinite}
+@keyframes bl{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+#bear .tw{transform-origin:center;animation:tw 1.8s ease-in-out infinite}
+#bear .tw2{animation-delay:-.9s}
+@keyframes tw{0%,100%{transform:scale(.5) rotate(0);opacity:.6}50%{transform:scale(1.15) rotate(25deg);opacity:1}}
+#st{position:absolute;left:50%;top:35%;width:0;height:0}
+#st i{position:absolute;left:0;top:0;font-style:normal;line-height:1;pointer-events:none;text-shadow:0 0 8px rgba(255,255,255,.9);animation:pop .95s ease-out forwards}
+@keyframes pop{0%{transform:translate(-50%,-50%) scale(.2) rotate(0);opacity:1}70%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1) rotate(var(--r));opacity:0}}
+#bb{position:absolute;right:0;bottom:100%;margin-bottom:10px;width:max-content;max-width:min(210px,68vw);padding:8px 14px;border-radius:16px 16px 4px 16px;background:#fff;color:#2b1745;font-size:.82rem;font-weight:600;line-height:1.4;border:1.5px solid var(--p2);box-shadow:0 8px 20px var(--glow);opacity:0;transform:translateY(8px) scale(.9);transition:opacity .3s,transform .3s;pointer-events:none}
+#bb.on{opacity:1;transform:none}
+@media(max-width:520px){#bw{width:82px}}
 </style>
 </head>
 <body>
@@ -185,7 +218,7 @@ nav a.act{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
 <div class="card pj"><div class="n">PROJECT 03</div><h3>Viết prompt hiệu quả</h3><p>So sánh ba mức prompt (cơ bản, cải tiến, nâng cao) qua ba tác vụ học tập với tài liệu về Beethoven.</p><a class="btn off">Link sắp cập nhật</a></div>
 <div class="card pj"><div class="n">PROJECT 04</div><h3>Công cụ hợp tác trực tuyến</h3><p>Vận dụng Trello, Google Docs, Room, Zalo và Google Drive để lập kế hoạch, ghi chép, trao đổi và lưu trữ tài liệu.</p><a class="btn off">Link sắp cập nhật</a></div>
 <div class="card pj"><div class="n">PROJECT 05</div><h3>Trưng bày sản phẩm nội dung số</h3><p>Học liệu số cho bài hát “Duyên dáng mùa xuân” (lớp 5): bản phối Suno AI, video Pippit AI và trò chơi Canva AI.</p><a class="btn off">Link sắp cập nhật</a></div>
-<div class="card pj"><div class="n">PROJECT 06</div><h3>Sử dụng AI có trách nhiệm</h3><p>Phân tích hướng dẫn của VinUniversity, đối chiếu UEH và RMIT, xây dựng bộ bảy nguyên tắc cá nhân.</p><a class="btn off">Link sắp cập nhật</a></div>
+<div class="card pj"><div class="n">PROJECT 06</div><h3>PHÂN TÍCH CHÍNH SÁCH SỬ DỤNG AI CỦA UNIVERSITY OF OXFORD (ANH)</h3><p>Phân tích ba văn bản chính sách AI của University of Oxford: các nguyên tắc cốt lõi, ưu điểm, hạn chế, bảng thống kê và nhận định cá nhân.</p><a class="btn off">Link sắp cập nhật</a></div>
 </div></section>
 
 <div class="pn"><a class="btn alt" href="#gioi-thieu">← Giới thiệu</a><a class="btn" href="#tong-ket">Tổng kết →</a></div>
@@ -215,6 +248,24 @@ nav a.act{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
 <button class="sb" type="button" onclick="sendFb()">Gửi góp ý</button><p id="fs" role="status"></p></div>
 <aside class="ci"><h3>Thông tin liên hệ</h3><small>EMAIL</small><a href="mailto:tamt00228@gmail.com">tamt00228@gmail.com</a><small>ĐIỆN THOẠI</small><a href="tel:0335819785">0335819785</a><hr><p>Cảm ơn thầy cô và các bạn đã ghé thăm portfolio cá nhân của Tạ Thị Tâm. Mình rất mong nhận được những góp ý và chia sẻ để không ngừng hoàn thiện bản thân, phát triển kỹ năng âm nhạc và nâng cao năng lực nghề nghiệp trên hành trình trở thành một giáo viên âm nhạc trong tương lai.</p></aside></div>
 <div class="cp">© 2026 Tạ Thị Tâm · Music &amp; Education Portfolio ♪</div></footer>
+<div id="bw"><div id="bb" aria-hidden="true"></div><div id="st" aria-hidden="true"></div>
+<button id="bear" type="button" aria-label="Chú gấu nhảy sao đáng yêu. Bấm để gấu nhảy">
+<svg viewBox="0 0 120 130" role="img" aria-hidden="true" focusable="false">
+<ellipse class="sh" cx="60" cy="124" rx="28" ry="5" fill="#2b1745" opacity=".25"/>
+<g transform="translate(106 22)"><polygon class="tw" points="0.0,-9.0 2.2,-3.1 8.6,-2.8 3.6,1.2 5.3,7.3 0.0,3.8 -5.3,7.3 -3.6,1.2 -8.6,-2.8 -2.2,-3.1" fill="#ffd54a"/></g>
+<g transform="translate(14 14)"><polygon class="tw tw2" points="0.0,-6.0 1.5,-2.0 5.7,-1.9 2.4,0.8 3.5,4.9 0.0,2.5 -3.5,4.9 -2.4,0.8 -5.7,-1.9 -1.5,-2.0" fill="#ff7ab8"/></g>
+<circle cx="33" cy="27" r="12" fill="#d9a07a"/><circle cx="33" cy="27" r="6.5" fill="#ffb3cf"/>
+<circle cx="87" cy="27" r="12" fill="#d9a07a"/><circle cx="87" cy="27" r="6.5" fill="#ffb3cf"/>
+<ellipse cx="42" cy="116" rx="12" ry="8" fill="#d9a07a"/><ellipse cx="78" cy="116" rx="12" ry="8" fill="#d9a07a"/>
+<ellipse cx="60" cy="94" rx="28" ry="26" fill="#e6b08c"/><ellipse cx="60" cy="99" rx="16" ry="15" fill="#fff0e0"/>
+<ellipse class="arl" cx="31" cy="92" rx="8" ry="15" fill="#d9a07a"/><ellipse class="arr" cx="89" cy="92" rx="8" ry="15" fill="#d9a07a"/>
+<circle cx="60" cy="52" r="31" fill="#e6b08c"/>
+<ellipse cx="60" cy="62" rx="14" ry="10.5" fill="#fff0e0"/><ellipse cx="60" cy="57" rx="5.2" ry="3.7" fill="#5a2d3b"/>
+<path d="M60 60.5v3.2M60 63.7q-4.5 4-8.5 0M60 63.7q4.5 4 8.5 0" stroke="#5a2d3b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<g class="eyes"><circle cx="48" cy="47" r="3.8" fill="#2b1745"/><circle cx="72" cy="47" r="3.8" fill="#2b1745"/><circle cx="49.2" cy="45.8" r="1.2" fill="#fff"/><circle cx="73.2" cy="45.8" r="1.2" fill="#fff"/></g>
+<ellipse cx="39" cy="59" rx="6" ry="4" fill="#ff9fc4" opacity=".75"/><ellipse cx="81" cy="59" rx="6" ry="4" fill="#ff9fc4" opacity=".75"/>
+<g transform="translate(86 24) rotate(18)"><ellipse cx="-7" cy="0" rx="8" ry="5.5" fill="#c77dff"/><ellipse cx="7" cy="0" rx="8" ry="5.5" fill="#ec5fa8"/><circle cx="0" cy="0" r="3.4" fill="#ffd54a"/></g>
+</svg></button></div>
 
 <script>
 var LINKS=["projects/bai-tap-01.pdf","projects/bai-tap-02.pdf","projects/bai-tap-03.pdf","projects/bai-tap-04.pdf","projects/bai-tap-05.pdf","projects/bai-tap-06.pdf"];
@@ -234,6 +285,20 @@ document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
 var PG=["gioi-thieu","du-an","tong-ket"],TT={"gioi-thieu":"Giới thiệu","du-an":"Dự án","tong-ket":"Tổng kết & Liên hệ"};
 function route(){var h=(location.hash||"").slice(1);if(PG.indexOf(h)<0)h=PG[0];document.querySelectorAll(".pg").forEach(function(p){p.classList.toggle("on",p.getAttribute("data-page")===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("act",a.getAttribute("data-p")===h)});document.title=TT[h]+" | Tạ Thị Tâm";window.scrollTo({top:0,behavior:"instant"})}
 window.addEventListener("hashchange",route);route();
+
+(function(){var bt=document.getElementById("bear"),bb=document.getElementById("bb"),st=document.getElementById("st"),busy=false,mi=0,bh=0,
+rd=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,
+MSG=["Chào bạn! ♪","Âm nhạc là ngôn ngữ của cảm xúc ✨","Xem bài tập của Tâm nhé!","Hihi, nhảy nào! ⭐","Cùng nghe nhạc nhé ♫"],
+ST=["★","✦","✧","♪","★"],CL=["#ffd54a","#ff7ab8","#c77dff","#ffe27a","#ffffff"];
+function burst(){if(rd)return;for(var i=0;i<14;i++){var s=document.createElement("i"),a=(-170+Math.random()*160)*Math.PI/180,d=50+Math.random()*60;
+s.textContent=ST[i%5];s.style.color=CL[i%5];s.style.fontSize=(14+Math.random()*13)+"px";
+s.style.setProperty("--dx",Math.cos(a)*d+"px");s.style.setProperty("--dy",Math.sin(a)*d+"px");s.style.setProperty("--r",(Math.random()*240-120)+"deg");
+s.style.animationDelay=(Math.random()*.15)+"s";s.addEventListener("animationend",function(){this.remove()});st.appendChild(s)}}
+function say(){bb.textContent=MSG[mi++%MSG.length];bb.classList.add("on");clearTimeout(bh);bh=setTimeout(function(){bb.classList.remove("on")},2300)}
+function jump(){if(busy)return;busy=true;bt.classList.add("jp");setTimeout(burst,380);say();setTimeout(function(){bt.classList.remove("jp");busy=false},1000)}
+bt.addEventListener("click",jump);
+setTimeout(jump,1400);
+setInterval(function(){if(!document.hidden&&!document.getElementById("md").classList.contains("on"))jump()},7000)})();
 </script>
 </body>
 </html>
